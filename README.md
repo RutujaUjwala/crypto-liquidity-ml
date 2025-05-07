@@ -89,7 +89,7 @@ flask2024/
 
 ### Infrastructure
 
-![Project Infrastructure](./reports/figures/project_infrastructure.png)
+![Project Infrastructure](reports/figures/Project_Artitecture.png)
 
 ## 📝 API Documentation
 
