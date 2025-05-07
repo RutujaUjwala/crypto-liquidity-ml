@@ -15,22 +15,19 @@ A comprehensive solution for predicting cryptocurrency liquidity using machine l
 - Virtual environment (recommended)
 
 ### Clone the repository
-
 ```bash
-git clone https://github.com/RutujaUjwala/crypto-liquidity-predictor.git
-cd crypto-liquidity-predictor
+git clone https://github.com/RutujaUjwala/crypto-liquidity-ml.git
+cd flask2024
 ```
 
 ### Create virtual environment (Optional)
-
 ```bash
 python -m venv venv
-venv\Scripts\activate  # On Windows
+.\venv\Scripts\activate  # On Windows
 source venv/bin/activate  # On Unix/macOS
 ```
 
 ### Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,17 +35,40 @@ pip install -r requirements.txt
 ## 🚀 Running the Application
 
 ### Start FastAPI App
-
 ```bash
 uvicorn app.main:app --reload
 # API will be available at http://127.0.0.1:8000
 ```
 
 ### Start Flask App
-
 ```bash
 python app.py
-# Web interface will be available at http://127.0.0.1:8000
+# Web interface will be available at http://127.0.0.1:5000
+```
+
+## 📂 Project Structure
+```
+flask2024/
+│
+├── app/                    # FastAPI application
+│   ├── __init__.py
+│   ├── main.py            # FastAPI entry point
+│   └── model.py           # ML model interface
+│
+├── Pipeline/              # Data processing pipelines
+│   └── prediction_pipeline.py
+│
+├── templates/             # HTML templates
+│   └── index.html
+│
+├── static/               # Static assets
+│   └── css/
+│
+├── artifacts/            # Model artifacts
+│   ├── liquidity_model.pkl
+│   └── scaler.pkl
+│
+└── requirements.txt      # Project dependencies
 ```
 
 ## 🌐 Application Architecture
