@@ -81,7 +81,7 @@ flask2024/
 
 ### Deployment Architecture
 
-![Deployment Architecture](./reports/figures/deployment_architecture.png)
+![Deployment Architecture](reports/figures/depolyment_artitecture.png)
 
 ### Project Architecture
 
