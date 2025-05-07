@@ -2,7 +2,7 @@
 
 Machine Learning project to predict cryptocurrency liquidity using FastAPI and Flask
 
-## Overview
+## Overvieww
 
 A comprehensive solution for predicting cryptocurrency liquidity using machine learning, implemented with FastAPI and Flask frameworks.
 
@@ -15,12 +15,14 @@ A comprehensive solution for predicting cryptocurrency liquidity using machine l
 - Virtual environment (recommended)
 
 ### Clone the repository
+
 ```bash
 git clone https://github.com/RutujaUjwala/crypto-liquidity-ml.git
 cd flask2024
 ```
 
 ### Create virtual environment (Optional)
+
 ```bash
 python -m venv venv
 .\venv\Scripts\activate  # On Windows
@@ -28,6 +30,7 @@ source venv/bin/activate  # On Unix/macOS
 ```
 
 ### Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -35,19 +38,22 @@ pip install -r requirements.txt
 ## 🚀 Running the Application
 
 ### Start FastAPI App
+
 ```bash
 uvicorn app.main:app --reload
 # API will be available at http://127.0.0.1:8000
 ```
 
 ### Start Flask App
+
 ```bash
 python app.py
 # Web interface will be available at http://127.0.0.1:5000
 ```
 
 ## 📂 Project Structure
-```
+
+```blash
 flask2024/
 │
 ├── app/                    # FastAPI application
@@ -75,7 +81,7 @@ flask2024/
 
 ### Deployment Architecture
 
-![Deployment Architecture](./reports/figures/Deployment_Architecture.png)
+![Deployment Architecture](./reports/figures/deployment_architecture.png)
 
 ### Project Architecture
 
@@ -83,7 +89,7 @@ flask2024/
 
 ### Infrastructure
 
-![Project Infrastructure](./reports/figures/Project_Infrastructure.png)
+![Project Infrastructure](./reports/figures/project_infrastructure.png)
 
 ## 📝 API Documentation
 
