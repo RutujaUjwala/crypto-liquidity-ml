@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Liquidity Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .card {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 1rem;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <h2 class="text-center mb-4 text-primary"><i class="fas fa-coins"></i> Predict Crypto Liquidity</h2>
+
+    <div class="card mx-auto p-4" style="max-width: 600px;">
+        <form method="post" action="/predict">
+            <div class="mb-3">
+                <label for="coin" class="form-label">Select a Coin:</label>
+                <select name="coin" id="coin" class="form-select" required>
+                    <option disabled selected>Choose a coin</option>
+                    {% for coin in coins %}
+                        <option value="{{ coin }}">{{ coin }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            {% for field in ['price', '1h', '24h', '7d', '24h_volume', 'mkt_cap', 'date', 'price_change', 'volume_change', 'coin_category'] %}
+                <div class="mb-3">
+                    <label class="form-label">{{ field.replace('_', ' ').title() }}:</label>
+                    <input type="text" name="{{ field }}" class="form-control" placeholder="Optional — uses default if empty">
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-success w-100">🔮 Predict</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="alert alert-info mt-4 text-center">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
