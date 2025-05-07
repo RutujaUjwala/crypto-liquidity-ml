@@ -1,0 +1,54 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+Lib/
+Include/
+Scripts/
+pyvenv.cfg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Dependencies
+env/Lib/
+env/Scripts/
+env/Include/
+env/share/
+
+# Large files and binaries
+*.dll
+*.exe
+*.bin
+*.pyd
+env/Lib/site-packages/
+artifacts/
+models/
+
+# Data and models
+*.pkl
+*.h5
+*.csv
+data/
+datasets/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+logs/
+*.log
